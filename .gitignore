@@ -1,0 +1,37 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/public
+README.md
+        
+        
+      /src/App.test.js
+        /src/Heading.css
+        /src/Heading.js
+        /src/components/EarthProjections.js
+        /src/fire.js
+        /src/index.css
+        /src/index.js
+        /src/logo.svg
+        /src/output.js
+        /src/registerServiceWorker.js
+        /src/sunset_duluth.jpg
+
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
