@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { geoOrthographic } from "d3-geo"
 import { timer } from "d3"
+import { withRouter } from 'react-router-dom';
+
 
 import {
   ComposableMap,
@@ -106,12 +108,12 @@ class Globe extends Component {
       <div  onMouseDown={this.handleMouseDown}
                   onMouseUp={this.handleMouseUp}
                   onMouseLeave={this.handleMouseUp}
-                  
+                  onMouseMove={this.handleMouseMove}   
                   >
 
         <button onClick={ this.handleZoomIn }>{ "Zoom in" }</button>
         <button onClick={ this.handleZoomOut }>{ "Zoom out" }</button>
-      <ComposableMap width={900} height={1100} projection={this.projection} >
+      <ComposableMap width={800} height={800} projection={this.projection} >
         <ZoomableGroup  zoom={ this.state.zoom }>
           <Geographies
             geography={"https://gist.githubusercontent.com/GordyD/49654901b07cb764c34f/raw/27eff6687f677c984a11f25977adaa4b9332a2a9/countries-and-states.json"}
@@ -140,4 +142,4 @@ class Globe extends Component {
   }
 }
 
-export default Globe
+export default withRouter(Globe)
